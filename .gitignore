@@ -1,0 +1,4 @@
+# Project exclude paths
+/out/
+/test_01_helloSpringMVC/target/
+/test_02_annotation/target/
