@@ -11,6 +11,7 @@
     <modules>
         <module>test_01_helloSpringMVC</module>
         <module>test_02_annotation</module>
+        <module>test_git</module>
 
     </modules>
 

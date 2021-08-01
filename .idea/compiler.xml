@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="test_02_annotation" />
         <module name="test_01_helloSpringMVC" />
+        <module name="test_git" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
