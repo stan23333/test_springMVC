@@ -13,6 +13,8 @@
         <module>test_02_annotation</module>
         <module>test_git</module>
         <module>test_03_RestFul</module>
+        <module>test_04_jSON_AJAX</module>
+        <module>test_05_Interacter</module>
 
     </modules>
 

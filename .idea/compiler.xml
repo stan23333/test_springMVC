@@ -6,6 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="test_04_jSON_AJAX" />
+        <module name="test_05_Interacter" />
         <module name="test_03_RestFul" />
         <module name="test_02_annotation" />
         <module name="test_01_helloSpringMVC" />
@@ -13,6 +15,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="test_05_intercepter" target="8" />
+      <module name="test_05_interceptor" target="8" />
       <module name="untitled" target="8" />
     </bytecodeTargetLevel>
   </component>

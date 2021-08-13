@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="asset/js/jquery-3.4.1.js"></script>
+<script>
+    function userIsExist() {
+        $.ajax({
+                url: "user/isexist",
+                data: {"username":$("#username").val()},
+                success: function (msg) {
+                    alert(msg);
+                }
+            }
+        );
+    }
+</script>
+<body>
+<form>
+    <input name="username" id="username" onblur="userIsExist()">
+    <br>
+    <input name="password">
+    <submit></submit>
+</form>
+
+</body>
+</html>

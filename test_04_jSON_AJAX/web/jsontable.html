@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.css">
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/locale/bootstrap-table-zh-CN.min.js"></script>
+
+
+<script>
+
+
+    $.ajax({
+        crossDomain: true,
+        type: 'get',
+        contentType: "application/json;charset=UTF-8",
+        async: false,
+        url: "https://interface.sina.cn/news/wap/fymap2020_data.d.json",
+        dataType: "jsonp",
+        jsonpCallback: 'fnsuccesscallback',
+        success: function (data) {
+            var citys = data.data.list;
+            var str = "";
+            for (let i in citys) {
+
+                str += "<tr>"
+                for (let j in citys[i]) {
+                    // console.log(citys[i][j]);
+                    if (j in ["city"]){
+                        continue;
+                    }
+                        let city = JSON.stringify(citys[i][j]);
+                    str += "<td>" + city + "</td>";
+
+
+                }
+                str += "</tr>"
+            }
+            console.log(str);
+            $("#mytab").append(str)
+
+        },
+        statusCode: {
+            404: function () {
+                console.log('Status code: 404');
+            }
+        }
+    });
+
+
+</script>
+<body>
+
+
+<table id="mytab" class="table table-hover">
+    <thead>
+
+    </thead>
+
+</table>
+
+</body>
+
+</html>
+
+</body>
+</html>
